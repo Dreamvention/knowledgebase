@@ -1,0 +1,14 @@
+# Opencart version
+
+[3.0.3.2, 3.0.2.0, 2.3.0.2 etc.]
+
+# Issue
+
+Warning: array_key_exists() expects parameter 2 to be array, bool given in catalog/controller/extension/d_quickcheckout/shipping_address.php on line 414
+
+#  Solution path
+
+Add сondition
+is_array($state['session']['shipping_address']['address_id'])
+
+#  Additional information
