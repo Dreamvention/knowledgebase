@@ -24,8 +24,8 @@ public function createOrder() {
 
     // LONG NAME FIX
     $product_name = $product['name'];
-    if (strlen($product_name) > 100) {
-      $product_name = substr($product_name, 0, 99);
+    if (utf8_strlen($product_name) > 100) {
+      $product_name = mb_substr($product_name, 0, 142, "utf-8");
     }
 
 
