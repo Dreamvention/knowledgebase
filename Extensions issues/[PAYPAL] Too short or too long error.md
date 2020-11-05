@@ -28,6 +28,12 @@ public function createOrder() {
       $product_name = mb_substr($product_name, 0, 142, "utf-8");
     }
 
+    // OR
+
+    if (strlen($product_name) > 100) {
+			$product_name = substr($product_name, 0, 99);
+		}
+
 
     $item_info[] = array(
       'name' => $product_name,
