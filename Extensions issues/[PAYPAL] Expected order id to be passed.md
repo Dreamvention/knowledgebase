@@ -33,8 +33,11 @@ else {
 if(isset($order_info['shipping_postcode']) && strlen($order_info['shipping_postcode']) > 0) {
   $shipping_info['address']['postal_code'] = $order_info['shipping_postcode'];
 }
-else {
+else if(isset($this->session->data['shipping_address']['postcode']) && strlen($this->session->data['shipping_address']['postcode']) > 0) {
   $shipping_info['address']['postal_code'] = $this->session->data['shipping_address']['postcode'];
+}
+else {
+  $shipping_info['address']['postal_code'] = "-";
 }
 
 // ORDER ID EXPECTED TO BE PASSED - ERROR FIX - END
