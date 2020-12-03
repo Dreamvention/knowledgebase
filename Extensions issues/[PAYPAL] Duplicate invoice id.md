@@ -18,3 +18,5 @@ There is no way you can fix it.
 You can set the order_id to something different to do some tests.
 Here's how to do it:
 http://i.imgur.com/oOYEAK9.png
+
+$order_info['order_id'] = "1231233";
